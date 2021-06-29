@@ -6,11 +6,18 @@ This sample demonstrates how to protect endpoints in a Go API by verifying an in
 
 ## Getting Started
 
-If you haven't already done so, [sign up](https://auth0.com/signup) for your free Auth0 account and create a new API client in the [dashboard](https://manage.auth0.com/).
+If you haven't already done so, [sign up](https://auth0.com/signup) for your free Auth0 account and create a new 
+API client in the [dashboard](https://manage.auth0.com/) by navigating to Applications -> APIS -> Create API.
+
+TODO: Add the link (or navigation instructions) for "the Golang API quickstart page in Auth0's documentation" 
+in following statement.
 
 Clone the repo or download it from the Golang API quickstart page in Auth0's documentation.
 
 ### Add Your Credentials
+
+TODO: While the "API Audience" is still available and mentioned on dashboard API settings page, "Domain" is 
+nowhere to be found. README shall be updated with instructions for locating "Domain" on the dashboard appropriately.
 
 Rename the `.env.example` to `.env` and you will see variables for `AUTH0_DOMAIN` and `AUTH0_API_AUDIENCE`. Update these values with your credentials and save the file.
 
@@ -21,7 +28,20 @@ AUTH0_AUDIENCE={API_AUDIENCE}
 
 ### Install Dependencies and Start Server
 
+TODO: Update these instructions to be self-sufficient, a user should be able to just copy/paste _almost_ entire block
+
 ```bash
+# update following with actual values as per your own API settings
+export AUTH0_DOMAIN=_YOUR_OWN_API_DOMAIN_
+export AUTH0_AUDIENCE=_YOUR_OWN_API_AUDIENCE_
+
+cd 01-Authorization-RS256
+
+echo AUTH0_DOMAIN=${MY_DOMAIN} > .env
+echo AUTH0_AUDIENCE=${MY_API_AUDIENCE} > .env
+
+# FIXME: following instructions does not work any more. Migration to go module with inclusion 
+# FIXME:   of go.mod is highly recommended in the sample project.
 # Install dependencies
 go get -d
 
