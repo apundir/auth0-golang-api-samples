@@ -1,3 +1,4 @@
+# best to update to farily recent version
 FROM golang:1.8-alpine3.6
 
 # install git
